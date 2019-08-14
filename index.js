@@ -380,11 +380,15 @@ client.on('message', message => {
             "¿Harías un trío?", //32
             "¿Has tenido alguna cita que haya salido mal?", //33
             "¿Qué es lo que más te excita?", //34
-            "¿Has hecho algo de lo que te arrepientes después de haber consumido alcohol?" //35
+            "¿Has hecho algo de lo que te arrepientes después de haber consumido alcohol?", //35
+            "¿Qué es lo más loco que has hecho en la vida?", //36
+            "¿Has mentido a alguien para no herir sus sentimientos?", //37
+            "¿Tus padres te han pillado dándote autoplacer?", //38
+            "¿Qué harías si fueras del sexo opuesto durante un mes?" //39
         ]
         let author = message.author;
         let member = message.mentions.members.first();
-        var random = Math.floor(Math.random() * 35);
+        var random = Math.floor(Math.random() * 39);
         if(member === undefined)
             message.channel.send(author + ": " + verdad[random]);
         else
